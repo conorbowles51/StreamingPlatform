@@ -20,7 +20,7 @@ It is currently styled to have a similar aesthetic to Spotify.
 # A look into some of the components I've created
 
 ## Sidebar component
-```
+```tsx
 interface SidebarProps {
     children: React.ReactNode;
 }
