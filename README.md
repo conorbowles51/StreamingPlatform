@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 This is a small project in its initial stages that is intended to be a small 
 streaming platform that people can listen to music, or upload their own.
@@ -7,7 +7,7 @@ Below is a screenshot of the project in its current state:
 ![image](https://github.com/conorbowles51/StreamingPlatform/assets/143211735/a54760d0-3df1-4c3e-9b1d-4f617260d8de)
 
 
-## About the project
+# About the project
 
 The project uses Next.js, Tailwind for styling, and custom components made with React.
 It is intended to be a fully responsive app and should adapt to whatever screen size
@@ -17,9 +17,9 @@ it is run on. I have included below a screenshot of how the app reacts to a mobi
 
 It is currently styled to have a similar aesthetic to Spotify.
 
-## A look into some of the components I've created
+# A look into some of the components I've created
 
-# Sidebar component
+## Sidebar component
 ```
 interface SidebarProps {
     children: React.ReactNode;
@@ -80,13 +80,13 @@ pathname, which is listed in the dependancy array of the useMemo hook. These rou
 and displayed as <SidebarItem> elements. Although there are only two routes right now, the 'Home' and 'Search'
 route, this method of implementation makes it much easier for me to add more routes down the line if I need to.
 
-## Next steps
+# Next steps
 
 The next steps for this project is to hook up the database tables that I have created with Supabase
 and allow for users to upload and listen to music. I will also be implenting an authentification system,
 probably using Clerk.js, and payment methods using Stripe.
 
-## Running the project
+# Running the project
 
 First, run the development server:
 
