@@ -83,7 +83,7 @@ route, this method of implementation makes it much easier for me to add more rou
 
 Below is the code for the SidebarItem component:
 
-```
+```tsx
 import Link from "next/link";
 import { IconType } from "react-icons";
 import { twMerge } from "tailwind-merge";
