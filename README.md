@@ -73,11 +73,11 @@ const Sidebar: React.FC<SidebarProps> = ({
 export default Sidebar;
 ```
 The above code is what generates the sidebar component, which will only be visible on medium
-and above sized screens (i.e tablet or computer monitor). The 'usePathname' hook gives me access to the
-current URL's path name. The navigational routes for this component are stored as objects with the 
+and above sized screens (i.e tablet or computer monitor).<br/> The 'usePathname' hook gives me access to the
+current URL's path name. </br>The navigational routes for this component are stored as objects with the 
 'useMemo' hook so that the 'active' property of the object gets updated correctly depending on the 
 pathname, which is listed in the dependancy array of the useMemo hook. These routes are then mapped over
-and displayed as <SidebarItem> elements. Although there are only two routes right now, the 'Home' and 'Search'
+and displayed as SidebarItem elements. Although there are only two routes right now, the 'Home' and 'Search'
 route, this method of implementation makes it much easier for me to add more routes down the line if I need to.
 
 # Next steps
