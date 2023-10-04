@@ -77,8 +77,44 @@ and above sized screens (i.e tablet or computer monitor).<br/></br> The 'usePath
 current URL's path name. </br></br>The navigational routes for this component are stored as objects with the 
 'useMemo' hook so that the 'active' property of the object gets updated correctly depending on the 
 pathname, which is listed in the dependancy array of the useMemo hook. These routes are then mapped over
-and displayed as SidebarItem elements. Although there are only two routes right now, the 'Home' and 'Search'
+and displayed as SidebarItem elements, where the properties from the 'route' object
+are given as props with the javascript es6 spread operator. Although there are only two routes right now, the 'Home' and 'Search'
 route, this method of implementation makes it much easier for me to add more routes down the line if I need to.
+
+Below is the code for the SidebarItem component:
+
+```
+import Link from "next/link";
+import { IconType } from "react-icons";
+import { twMerge } from "tailwind-merge";
+
+interface SidebarItemProps {
+    icon: IconType;
+    label: string;
+    active?: boolean;
+    href: string;
+}
+
+const SidebarItem: React.FC<SidebarItemProps> = ({
+    icon: Icon,
+    label,
+    active,
+    href
+}) => {
+    return ( 
+        <Link href={href} className={
+            twMerge("flex flex-row h-auto items-center w-full gap-x-4 text-md font-medium cursor-pointer hover:text-white transition text-neutral-400 py-1", active && "text-white")
+        }>
+            <Icon size={26}/>
+            <p className="truncate w-full">{label}</p>
+        </Link>
+     );
+}
+ 
+export default SidebarItem;
+```
+This component takes the props we gave it and renders a simple link with the Icon and label
+with some basic tailwind styling.
 
 # Next steps
 
